@@ -1,0 +1,190 @@
+body {
+  counter-reset:section;
+  background-color: white;
+  font-family: courier;
+  color: black;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.panda {
+    height: 300px;
+    width: 300px;
+    margin-left: 30%;
+}
+
+.form-signin {
+  margin-left: 30%;
+}
+
+.new-survey {
+  margin-left: 30%;
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px 30px 10px 30px;
+  color: black;
+}
+
+.new-survey:hover {
+  background-color: black;
+  color: white;
+}
+
+.links {
+  list-style-type:none;
+}
+
+.links li a {
+  text-decoration: none;
+  color: black;
+}
+
+.links li a:hover {
+  text-decoration: underline;
+  color: gray;
+}
+
+table tr {
+  border: 1px solid black;
+}
+
+/********************************/
+
+.header ul {
+  text-decoration: none;
+  text-align: right;
+}
+
+.header ul li {
+  display: inline-block;
+}
+
+.header li a {
+  text-decoration: none;
+  color: black;
+}
+
+.header li a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+header {
+  background-color: gray;
+  padding: 5px 5px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  font-size: 1.5em;
+  display: inline;
+}
+
+header p {
+  margin-left: 5px ;
+  font-size: 10pt;
+  display: inline;
+}
+
+header p a {
+  color: black;
+  text-decoration: none;
+}
+
+header p a:nth-child(n + 2):before {
+  content: " | ";
+}
+
+article {
+  margin: 5px 5px;
+}
+
+article a.vote-button {
+  color: #8C8C8C;
+  text-decoration: none;
+  display: inline;
+  vertical-align: sub;
+}
+
+.clicked {
+  color: red;
+}
+
+
+article h2 {
+  display: inline;
+  font-size: 10pt;
+}
+
+article:before {
+  counter-increment: section;
+  color: #8C8C8C;
+  font-size: 10pt;
+  content: counter(section) ". ";
+}
+
+article h2 a {
+  text-decoration: none;
+  color: black;
+}
+
+article p {
+  color: #8C8C8C;
+  font-size: 7pt;
+  margin: 3px 30px;
+}
+
+article p span.points:after {
+  content: " points";
+}
+
+article p span.username:before {
+  content: " by ";
+}
+
+article p span.timestamp:after {
+  content: ' hours ago';
+}
+
+article p span.comment-count:before {
+  content: ' | ';
+}
+
+article p span.comment-count:after {
+  content: ' comments | ';
+}
+
+article p a.delete {
+  text-decoration: none;
+  color: #8C8C8C;
+  text-decoration: none;
+}
+
+article p a.delete:before {
+  content: ' delete this post';
+
+}
+
+form {
+  margin: 15px 30px;
+}
+
+form#posts input[type='text'] {
+  width: 200px;
+  margin-left: 20px;
+  font-size: 10pt;
+  height: 17px;
+
+}
+
+form#posts input[type='submit'] {
+  font-size: 10pt;
+  margin-left: 5px;
+  border-width: 1px;
+  font-weight: bold;
+  background-color: #F4712D;
+
+
+}
+
