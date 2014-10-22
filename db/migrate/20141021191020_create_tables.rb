@@ -13,8 +13,7 @@ class CreateTables < ActiveRecord::Migration
   		t.string :receiver_name
   		t.string :phone_num
   		t.text :message
-  		t.date :date
-  		t.time :time
+  		t.datetime :datetime
   		t.references :user
 
   		t.timestamps

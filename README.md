@@ -6,3 +6,4 @@ A friendly reminder app that allows the user to send reminders via text to famil
 Resources:
 
 * Twilio API: https://www.twilio.com/docs/api/rest
+* Twilio-Ruby Gem: https://github.com/twilio/twilio-ruby

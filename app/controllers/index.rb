@@ -48,9 +48,15 @@ get '/nudges' do
 end
 
 post '/nudges/create' do
-  Nudge.create(receiver_name: params[:receiver_name], phone_num: params[:phone_num], message: params[:message], date: params[:date], time: params[:time], user_id: @user.id)
+  @user = current_user
 
-  # redirect '/nudges/:id'
+  phone_num = '+1' + params[:phone_num]
+  time = params[:hours] + ':' + params[:minutes] + ':00'
+  datetime = params[:date] + " " + time
+
+  nudge = Nudge.create!(receiver_name: params[:receiver_name], phone_num: phone_num, message: params[:message], datetime: datetime, user_id: @user["id"])
+
+  redirect "/nudges/#{nudge.id}"
 end
 
 # thank you page 
@@ -60,10 +66,11 @@ get '/nudges/:id' do
   erb :nudges_confirm
 end
 
-# all of a user's nudges
+# all of a user's nudges - NOT WORKING
 
 get '/user/:id/nudges' do
   @user = User.find(params[:id])
+  @nudges = Nudge.find(user_id: params[:id]) # THIS IS NOT WORKING YET
 
   erb :profile
 end
