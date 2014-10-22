@@ -1,6 +1,7 @@
 <div class="container">
 	
 	<div class="nudges">
+		<h1><%= @user.name %>'s Nudges</h1>
 		<ul>
 		<% @nudges.each do |nudge| %>
 			<li><%= nudge["receiver_name"] %><br>

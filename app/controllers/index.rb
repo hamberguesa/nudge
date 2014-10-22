@@ -27,13 +27,14 @@ post '/signup' do
       password: params[:password], 
       email: params[:email]
       })
+    redirect '/nudges'
   else
-    flash[:notice] = "Incorrect password"
+    flash[:notice] = "Signup failed. Please try again."
     redirect '/'
   end
 
   if @user.id.nil?
-    flash[:notice] = "Username or email already taken"
+    flash[:notice] = "Username or email already taken."
     redirect '/'
   else
     session[:user_id] = @user.id
@@ -45,6 +46,7 @@ end
 
 get '/nudges' do
   @user = current_user
+  
   erb :nudges
 end
 
@@ -57,6 +59,7 @@ post '/nudges/create' do
 
   nudge = Nudge.create!(receiver_name: params[:receiver_name], phone_num: phone_num, message: params[:message], datetime: datetime, user_id: @user["id"])
 
+  # redirect '/nudges'
   redirect "/nudges/#{nudge.id}"
 end
 
@@ -68,7 +71,7 @@ get '/nudges/:id' do
   erb :nudges_confirm
 end
 
-# all of a user's nudges
+# Profile - all of a user's nudges
 
 get '/user/:id/nudges' do
   @user = User.find(params[:id])
@@ -77,7 +80,7 @@ get '/user/:id/nudges' do
   erb :profile
 end
 
-# logout
+# Logout
 
 get '/logout' do
   session.clear
