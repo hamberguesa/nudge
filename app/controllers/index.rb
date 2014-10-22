@@ -1,4 +1,5 @@
 # homepage - login/signup
+
 get '/' do
   if current_user.nil?
     erb :home
@@ -60,22 +61,24 @@ post '/nudges/create' do
 end
 
 # thank you page 
+
 get '/nudges/:id' do
   @nudge = Nudge.find(params[:id])
 
   erb :nudges_confirm
 end
 
-# all of a user's nudges - NOT WORKING on erb side
+# all of a user's nudges
 
 get '/user/:id/nudges' do
   @user = User.find(params[:id])
-  @nudges = Nudge.find_by(user_id: params[:id]) 
+  @nudges = Nudge.where(user_id: params[:id]) 
 
   erb :profile
 end
 
 # logout
+
 get '/logout' do
   session.clear
   redirect '/'
