@@ -46,7 +46,7 @@ end
 
 get '/nudges' do
   @user = current_user
-  
+
   erb :nudges
 end
 
@@ -59,8 +59,10 @@ post '/nudges/create' do
 
   nudge = Nudge.create!(receiver_name: params[:receiver_name], phone_num: phone_num, message: params[:message], datetime: datetime, user_id: @user["id"])
 
+  content_type :json
+  nudge.to_json
   # redirect '/nudges'
-  redirect "/nudges/#{nudge.id}"
+  # redirect "/nudges/#{nudge.id}"
 end
 
 # thank you page 

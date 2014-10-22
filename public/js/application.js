@@ -4,12 +4,15 @@ $(document).ready(function() {
 })
 
 var confirm_nudge = function(evt) {
-	// evt.preventDefault();
+	evt.preventDefault();
+	var data = $('.form-signup').serialize();
+
 	$.ajax({
 		url: 'nudges/create',
-		type: 'POST'
-	}).done(view.update())
-}
+		type: 'POST',
+		data: data
+	}).done(view.update(returned_nudge))
+};
 
 
 
