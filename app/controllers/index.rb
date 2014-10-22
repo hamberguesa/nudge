@@ -1,11 +1,7 @@
-# home page
+# homepage - login/signup
 get '/' do
-  if session[:user_id]
-    erb :_header
-  end
-  erb :index
+  
 end
-
 
 post '/login' do
   @user = User.find_by_username (params[:username])
@@ -14,7 +10,6 @@ post '/login' do
     current_user
     redirect '/'
   else
-    # flash[:login] = "We couldn't find username or password."
     redirect '/'
   end
 end
@@ -24,65 +19,88 @@ post '/signup' do
   session[:user_id] = @user.id
   current_user
   redirect '/'
+end
+
+# text set-up
+
+get '/nudges' do
 
 end
 
-#user's profile page
-get '/users/:id' do
-  @profile = User.find(params[:id])
-  if session[:user_id]
-    erb :_header
-  end
-  erb :user_profile
+post '/nudges/create' do
+
 end
 
+# thank you page 
+get '/nudges/:id' do
+
+end
+
+# all of a user's nudges
+
+get '/user/:id/nudges' do
+
+end
+
+# logout
 get '/logout' do
   session.clear
   redirect '/'
 end
 
-# needs work
-get '/surveys/:id/edit' do
-  if session[:user_id]
-    erb :_header
-  end
-  erb :edit_survey_form
-end
 
-#needs work
-post '/surveys/:id/edit' do
 
-end
+# #user's profile page
+# get '/users/:id' do
+#   @profile = User.find(params[:id])
+#   if session[:user_id]
+#     erb :_header
+#   end
+#   erb :user_profile
+# end
 
-get '/surveys/create' do
-  # if session[:user_id] != nil
-    erb :_header
-  # end
-  erb :survey_form
-end
+# # needs work
+# get '/surveys/:id/edit' do
+#   if session[:user_id]
+#     erb :_header
+#   end
+#   erb :edit_survey_form
+# end
 
-post '/surveys/create' do
-  parse_survey_params(params)
-  redirect'/'
-end
+# #needs work
+# post '/surveys/:id/edit' do
 
-get '/surveys/:id/take' do
-  if session[:user_id]
-    erb :_header
-  end
-  @survey = Survey.find(params[:id])
-  erb :take_survey
-end
+# end
 
-post '/results/create' do
-  Response.create(choice_id: @params["answer"], user_id: session[:user_id])
+# get '/surveys/create' do
+#   # if session[:user_id] != nil
+#     erb :_header
+#   # end
+#   erb :survey_form
+# end
 
-end
+# post '/surveys/create' do
+#   parse_survey_params(params)
+#   redirect'/'
+# end
 
-get '/surveys/:id/results' do
-  @survey = Survey.find(params[:id])
-  erb :results
-end
+# get '/surveys/:id/take' do
+#   if session[:user_id]
+#     erb :_header
+#   end
+#   @survey = Survey.find(params[:id])
+#   erb :take_survey
+# end
+
+# post '/results/create' do
+#   Response.create(choice_id: @params["answer"], user_id: session[:user_id])
+
+# end
+
+# get '/surveys/:id/results' do
+#   @survey = Survey.find(params[:id])
+#   erb :results
+# end
 
 # get '/' do
 #   redirect '/posts'

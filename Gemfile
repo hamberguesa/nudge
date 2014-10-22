@@ -19,6 +19,11 @@ gem 'pry'
 
 gem 'shotgun'
 
+gem 'twilio-ruby'
+
+gem 'dotenv'
+gem 'typhoeus'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
