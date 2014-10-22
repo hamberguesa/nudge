@@ -66,11 +66,11 @@ get '/nudges/:id' do
   erb :nudges_confirm
 end
 
-# all of a user's nudges - NOT WORKING
+# all of a user's nudges - NOT WORKING on erb side
 
 get '/user/:id/nudges' do
   @user = User.find(params[:id])
-  @nudges = Nudge.find(user_id: params[:id]) # THIS IS NOT WORKING YET
+  @nudges = Nudge.find_by(user_id: params[:id]) 
 
   erb :profile
 end
