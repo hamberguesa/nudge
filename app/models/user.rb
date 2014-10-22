@@ -1,3 +1,3 @@
-class Nudge < ActiveRecord::Base
+class User < ActiveRecord::Base
   # Remember to create a migration!
 end
