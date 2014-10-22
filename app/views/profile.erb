@@ -1,0 +1,15 @@
+<div class="container">
+	
+	<div class="nudges">
+		<ul>
+		<% @nudges.each do |nudge| %>
+			<li><%= nudge["receiver_name"] %><br>
+				<%= nudge["phone_num"] %><br>
+				<%= nudge["message"] %><br>
+				<%= nudge["date"] %><br>
+				<%= nudge["time"] %>
+			</li>
+		<% end %>
+		</ul>
+	</div>
+</div>

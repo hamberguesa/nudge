@@ -24,6 +24,8 @@ gem 'twilio-ruby'
 gem 'dotenv'
 gem 'typhoeus'
 
+gem 'bcrypt'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
