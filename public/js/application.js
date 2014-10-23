@@ -5,7 +5,7 @@ $(document).ready(function() {
 
 var confirm_nudge = function(evt) {
 	evt.preventDefault();
-	var data = $('.form-signup').serialize();
+	var data = $('.form-create').serialize();
 
 	$.ajax({
 		url: 'nudges/create',

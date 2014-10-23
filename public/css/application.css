@@ -1,4 +1,4 @@
-/*Time drop down menu */
+/* (Time drop down) menu */
 
 fieldset {
 border: 0;
@@ -20,19 +20,15 @@ height: 200px;
 body {
   counter-reset:section;
   background-color: white;
-  font-family: courier;
   color: black;
   max-width: 700px;
   margin: 0 auto;
+  font-family: 'Playfair Display';
 }
 
 #main_logo {
-  height: 15%;
-  width: 15%;
-}
-
-#login_logo {
-
+  height: 20%;
+  width: 20%;
 }
 
 .form-signin {
@@ -41,6 +37,17 @@ body {
 
 .form-signup {
   margin-left: 30%;
+}
+
+.form-create {
+  margin-left: 30%;
+  border: ;
+}
+
+.ui-datepicker { 
+  margin-top: 60px;
+  margin-left: 225px;
+  z-index: 1000;
 }
 
 .new-survey {
@@ -70,11 +77,27 @@ body {
   color: gray;
 }
 
+.button {
+
+}
+
+.button:hover{
+  
+}
+
+.create_nudge {
+
+}
+
 table tr {
   border: 1px solid black;
 }
 
 /********************************/
+
+.header {
+  font-family: 'Satisfy';
+}
 
 .header ul {
   text-decoration: none;
@@ -92,11 +115,11 @@ table tr {
 
 .header li a:hover {
   text-decoration: underline;
-  color: white;
+  color: gray;
 }
 
 header {
-  background-color: gray;
+  background-color: white;
   padding: 5px 5px;
   text-align: left;
   margin-bottom: 10px;
@@ -122,95 +145,6 @@ header p a:nth-child(n + 2):before {
   content: " | ";
 }
 
-article {
-  margin: 5px 5px;
-}
-
-article a.vote-button {
-  color: #8C8C8C;
-  text-decoration: none;
-  display: inline;
-  vertical-align: sub;
-}
-
-.clicked {
-  color: red;
-}
-
-
-article h2 {
-  display: inline;
-  font-size: 10pt;
-}
-
-article:before {
-  counter-increment: section;
-  color: #8C8C8C;
-  font-size: 10pt;
-  content: counter(section) ". ";
-}
-
-article h2 a {
-  text-decoration: none;
-  color: black;
-}
-
-article p {
-  color: #8C8C8C;
-  font-size: 7pt;
-  margin: 3px 30px;
-}
-
-article p span.points:after {
-  content: " points";
-}
-
-article p span.username:before {
-  content: " by ";
-}
-
-article p span.timestamp:after {
-  content: ' hours ago';
-}
-
-article p span.comment-count:before {
-  content: ' | ';
-}
-
-article p span.comment-count:after {
-  content: ' comments | ';
-}
-
-article p a.delete {
-  text-decoration: none;
-  color: #8C8C8C;
-  text-decoration: none;
-}
-
-article p a.delete:before {
-  content: ' delete this post';
-
-}
-
 form {
   margin: 15px 30px;
 }
-
-form#posts input[type='text'] {
-  width: 200px;
-  margin-left: 20px;
-  font-size: 10pt;
-  height: 17px;
-
-}
-
-form#posts input[type='submit'] {
-  font-size: 10pt;
-  margin-left: 5px;
-  border-width: 1px;
-  font-weight: bold;
-  background-color: #F4712D;
-
-
-}
-
