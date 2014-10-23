@@ -26,11 +26,20 @@ body {
   margin: 0 auto;
 }
 
-img {
-  
+#main_logo {
+  height: 15%;
+  width: 15%;
+}
+
+#login_logo {
+
 }
 
 .form-signin {
+  margin-left: 30%;
+}
+
+.form-signup {
   margin-left: 30%;
 }
 
@@ -94,7 +103,7 @@ header {
 }
 
 header h1 {
-  font-size: 1.5em;
+  font-size: 5em;
   display: inline;
 }
 

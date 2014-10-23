@@ -16,4 +16,8 @@ helpers do
   def header
     erb :_header
   end
+
+  def login_header
+    erb :_loginheader
+  end
 end
