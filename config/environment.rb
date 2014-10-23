@@ -19,7 +19,6 @@ require 'sinatra'
 require "sinatra/reloader" if development?
 
 require 'erb'
-require 'faker'
 require 'json'
 require 'twilio-ruby'
 require 'clockwork'
