@@ -19,15 +19,15 @@ class Worker
 		nudges.each do |nudge|
 			nudge_time = Time.parse(nudge.datetime)
 			if nudge_time > (now - 150000) && nudge_time < (now + 150000) 
-				send_text(nudge.message)
+				send_text(nudge.phone_num, nudge.message)
 			end
 		end
 	end
 
-	def send_text(message)
+	def send_text(phone_num, message)
 		@client.account.messages.create({
 			:from => '+14159677811', 
-			:to => '4154305552', 
+			:to => phone_num, 
 			:body => message,  
 		})
 	end
