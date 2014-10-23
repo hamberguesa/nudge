@@ -29,6 +29,8 @@ gem 'bcrypt'
 gem 'sidekiq'
 gem 'redis'
 
+gem 'clockwork'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'

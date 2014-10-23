@@ -7,13 +7,17 @@ module Nudge
 	class Client
 		attr_reader :last_response, :last_request
 
-		acct_sid = ENV['ACCT_SID']
+		account_sid = ENV['ACCT_SID']
 		auth_token = ENV['AUTH_TOKEN']
-
-	Twilio.configure do |config|
-	  config.account_sid = acct_sid
-	  config.auth_token = auth_token
-	end
-
+ 
+	@client = Twilio::REST::Client.new account_sid, auth_token 
+ 
+		def send_text(message)
+			@client.account.messages.create({
+				:from => '+14159677811', 
+				:to => '4154305552', 
+				:body => message,  
+			})
+		end
 	end
 end

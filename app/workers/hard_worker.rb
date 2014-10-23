@@ -1,1 +1,0 @@
-hard_worker.rb

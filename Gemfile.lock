@@ -20,6 +20,9 @@ GEM
     builder (3.2.2)
     celluloid (0.15.2)
       timers (~> 1.1.0)
+    clockwork (1.0.0)
+      activesupport
+      tzinfo
     coderay (1.1.0)
     connection_pool (2.0.0)
     daemons (1.1.9)
@@ -110,6 +113,7 @@ DEPENDENCIES
   activerecord
   activesupport
   bcrypt
+  clockwork
   dotenv
   factory_girl
   faker

@@ -22,8 +22,7 @@ require 'erb'
 require 'faker'
 require 'json'
 require 'twilio-ruby'
-require 'sidekiq'
-require 'redis'
+require 'clockwork'
 
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))

@@ -12,4 +12,8 @@ helpers do
   def delete_nudge_button(nudge_id)
   	erb :_delete_nudge_button, locals: { id: nudge_id }
   end
+
+  def header
+    erb :_header
+  end
 end
