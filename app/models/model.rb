@@ -1,8 +1,8 @@
-require_relative 'nudge'
 require 'twilio-ruby'
 require 'dotenv'
 require 'active_record'
 Dotenv.load
+require_relative 'nudge'
 
 class Worker 
 	attr_reader :last_response, :last_request
