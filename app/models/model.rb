@@ -1,8 +1,10 @@
-require 'twilio-ruby'
 require 'dotenv'
-require 'active_record'
 Dotenv.load
-require_relative 'nudge'
+require 'twilio-ruby'
+require 'active_record'
+require_relative '../../config/environment.rb'
+require_relative '../../config/database.rb'
+# require_relative 'nudge'
 
 class Worker 
 	attr_reader :last_response, :last_request
@@ -10,8 +12,7 @@ class Worker
 	account_sid = ENV['ACCT_SID']
 	auth_token = ENV['AUTH_TOKEN']
 
-	account_sid = 'AC6090c1b7becb69836694649bdf2dc4ee'
-	auth_token = '608b52f087b35b81bb5d1ac556715945'
+
 
 	@client = Twilio::REST::Client.new account_sid, auth_token 
 

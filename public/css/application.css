@@ -1,7 +1,15 @@
+.body {
+width: 100%;
+height: 100%;
+background-size: 100%;
+background-image: url('wall4_@2x.png');
+}
+
 /* (Time drop down) menu */
 
 fieldset {
 border: 0;
+margin-left: -2%;
 }
 
 label {
@@ -16,6 +24,8 @@ width: 200px;
 .overflow {
 height: 200px;
 }
+
+/*Menu stuff ends here*/
 
 body {
   counter-reset:section;
@@ -41,13 +51,30 @@ body {
 
 .form-create {
   margin-left: 30%;
-  border: ;
+}
+
+.nudges {
+  margin-left: 30%;
+}
+
+.nudges ul {
+  list-style: none;
+  margin-left: -20%;
+  margin-right: 30%;
+}
+
+.nudges ul li {
+padding: 1em;
+border: solid lightgray 1px;
+border-radius: 5px;
+margin: .5em;
 }
 
 .ui-datepicker { 
   margin-top: 60px;
   margin-left: 225px;
   z-index: 1000;
+  font-family: 'Satisfy';
 }
 
 .new-survey {
@@ -111,6 +138,7 @@ table tr {
 .header li a {
   text-decoration: none;
   color: black;
+  font-size: 1.25em;
 }
 
 .header li a:hover {
@@ -132,7 +160,7 @@ header h1 {
 
 header p {
   margin-left: 5px ;
-  font-size: 10pt;
+  font-size: 1.25em;
   display: inline;
 }
 
