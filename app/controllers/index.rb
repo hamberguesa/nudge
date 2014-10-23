@@ -14,7 +14,7 @@ post '/login' do
     session[:user_id] = @user.id
     redirect '/nudges'
   else
-    flash[:notice] = "Login failed. Please try again."
+    # flash[:notice] = "Login failed. Please try again."
     redirect '/'
   end
 end
@@ -29,12 +29,12 @@ post '/signup' do
       })
     redirect '/nudges'
   else
-    flash[:notice] = "Signup failed. Please try again."
+    # flash[:notice] = "Signup failed. Please try again."
     redirect '/'
   end
 
   if @user.id.nil?
-    flash[:notice] = "Username or email already taken."
+    # flash[:notice] = "Username or email already taken."
     redirect '/'
   else
     session[:user_id] = @user.id
