@@ -38,6 +38,10 @@ configure do
 
   # Set the views to
   set :views, File.join(Sinatra::Application.root, "app", "views")
+
+  set :raise_errors, true
+  set :dump_errors, true
+  set :show_exceptions, true
 end
 
 # Set up the controllers and helpers
