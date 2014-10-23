@@ -26,10 +26,8 @@ body {
   margin: 0 auto;
 }
 
-.panda {
-    height: 300px;
-    width: 300px;
-    margin-left: 30%;
+img {
+  
 }
 
 .form-signin {
