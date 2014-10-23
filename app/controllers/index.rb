@@ -65,13 +65,13 @@ post '/nudges/create' do
   # redirect "/nudges/#{nudge.id}"
 end
 
-# thank you page 
+# thank you page - Not needed now thanks to AJAX
 
-get '/nudges/:id' do
-  @nudge = Nudge.find(params[:id])
+# get '/nudges/:id' do
+#   @nudge = Nudge.find(params[:id])
 
-  erb :nudges_confirm
-end
+#   erb :nudges_confirm
+# end
 
 # Profile - all of a user's nudges
 
@@ -80,6 +80,15 @@ get '/user/:id/nudges' do
   @nudges = Nudge.where(user_id: params[:id]) 
 
   erb :profile
+end
+
+# Delete
+
+delete '/nudges/:id' do
+  @nudge = Nudge.find(params[:id]).destroy
+  user = User.find_by(id: @nudge.user_id)
+
+  redirect "/user/#{user.id}/nudges"
 end
 
 # Logout

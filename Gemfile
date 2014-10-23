@@ -26,6 +26,9 @@ gem 'typhoeus'
 
 gem 'bcrypt'
 
+gem 'sidekiq'
+gem 'redis'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'

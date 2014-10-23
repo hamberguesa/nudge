@@ -8,4 +8,8 @@ helpers do
   def no_user_redirect
     redirect '/' if current_user.nil?
   end
+
+  def delete_nudge_button(nudge_id)
+  	erb :_delete_nudge_button, locals: { id: nudge_id }
+  end
 end

@@ -7,7 +7,8 @@
 			<li><%= nudge["receiver_name"] %><br>
 				<%= nudge["phone_num"] %><br>
 				<%= nudge["message"] %><br>
-				<%= nudge["datetime"] %>
+				<%= nudge["datetime"] %><br>
+				<%= delete_nudge_button(nudge["id"]) %> 
 			</li>
 		<% end %>
 		</ul>
