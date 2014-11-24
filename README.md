@@ -1,5 +1,4 @@
 # nudge
-=====
 
 [nudge-app.herokuapp.com] (nudge-app.herokuapp.com)**
 
