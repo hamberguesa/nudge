@@ -1,6 +1,6 @@
 # nudge
 
-[nudge-app.herokuapp.com] (nudge-app.herokuapp.com)**
+[https://nudge-app.herokuapp.com] (nudge-app.herokuapp.com)**
 
 A friendly reminder app that allows the user to send reminders via text to family & friends at a user-specified date and time.
 
